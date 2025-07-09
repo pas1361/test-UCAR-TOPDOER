@@ -67,3 +67,6 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
 ```
+
+Для тестирования API через встроенный в FastApi Swagger - необходимо использовать Pydantic-модели.
+В нашем случаем нет возможности передать JSON в Swagger. Для тестирования и отправки запросов удобнее использовать Postman.
