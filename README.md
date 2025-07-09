@@ -2,9 +2,11 @@
 Тестовое задание для UCAR&lt;>TOPDOER выполнил Первишко Александр
 
 Установка зависимостей:
+
 pip install fastapi uvicorn
 
 Запуск:
+
 uvicorn main:app --reload
 
 Примеры запросов и результаты их выполнения в командной строке Windows - cmd.exe:
@@ -55,4 +57,13 @@ curl http://127.0.0.1:8000/reviews?sentiment=positive
 
 curl http://127.0.0.1:8000/reviews?sentiment=neutral
 [{"id":3,"text":"Хотел бы видеть больше функций","sentiment":"neutral","created_at":"2025-07-09T11:29:26.814838"}]
+```
+
+
+Можно добавить в код следующие строки, чтобы запускать исполнение скрипта короче - python main.py:
+
+```
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
 ```
